@@ -4,6 +4,7 @@ const tabs_switcher = {
     switch () {
         for (let i = 0; i < this.btns.length; i++) {
             this.btns[i].addEventListener('click', e => {
+                document.querySelector('.main__container').classList.add('normal__width');
                 for (let j = 0; j < this.btns.length; j++) {
                     this.btns[j].classList.remove('active__btn', 'border__right', 'border__left', 'border__both');
                     this.tabs[j].classList.remove('active__tab');

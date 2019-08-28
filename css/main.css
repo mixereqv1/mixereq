@@ -44,16 +44,11 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .container .wrapper .main {
-    flex-wrap: wrap;
-  }
+  position: relative;
 }
 
 .container .wrapper .main__container {
-  width: 65%;
+  width: 100%;
   height: 100%;
   background: #79a5d6;
   display: flex;
@@ -62,12 +57,12 @@ body {
   border-radius: 8px;
   margin-right: -15px;
   position: relative;
+  z-index: 5;
 }
 
 @media screen and (max-width: 768px) {
   .container .wrapper .main__container {
     width: 100%;
-    margin: 0 0 -15px 0;
   }
 }
 
@@ -107,7 +102,6 @@ body {
   height: 10%;
   background: #fff;
   border-radius: 0 0 8px 8px;
-  z-index: 21;
 }
 
 .container .wrapper .main__container .nav__list {
@@ -168,7 +162,11 @@ body {
   height: 100%;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  z-index: 4;
+}
+
+.container .wrapper .main .normal__width {
+  width: 65%;
+  animation-name: fadeInRight;
 }
 
 .container .wrapper .main__home, .container .wrapper .main__projects, .container .wrapper .main__contact {
@@ -263,10 +261,10 @@ body {
     animation-name: fadeInUp;
     animation-duration: .5s;
     position: absolute;
-    top: 20px;
+    top: 0px;
     z-index: 20;
-    height: 80%;
-    width: 85%;
+    height: calc(100% - 80px);
+    width: 100%;
   }
 }
 
