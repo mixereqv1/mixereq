@@ -169,6 +169,12 @@ body {
   animation-name: fadeInRight;
 }
 
+@media screen and (max-width: 768px) {
+  .container .wrapper .main .normal__width {
+    width: 100%;
+  }
+}
+
 .container .wrapper .main__home, .container .wrapper .main__projects, .container .wrapper .main__contact {
   display: none;
   width: 50%;
