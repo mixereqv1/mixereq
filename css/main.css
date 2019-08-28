@@ -62,7 +62,6 @@ body {
   border-radius: 8px;
   margin-right: -15px;
   position: relative;
-  z-index: 10;
 }
 
 @media screen and (max-width: 768px) {
@@ -103,15 +102,15 @@ body {
   margin: -40px auto 0;
 }
 
-.container .wrapper .main__container .header {
+.container .wrapper .main__container .nav {
   display: flex;
   height: 10%;
-  z-index: 11;
   background: #fff;
   border-radius: 0 0 8px 8px;
+  z-index: 21;
 }
 
-.container .wrapper .main__container .header__list {
+.container .wrapper .main__container .nav__list {
   list-style: none;
   display: flex;
   width: 100%;
@@ -119,7 +118,7 @@ body {
   bottom: 2px;
 }
 
-.container .wrapper .main__container .header__list__link {
+.container .wrapper .main__container .nav__list__link {
   text-decoration: none;
   color: #646464;
   width: calc(100% / 3);
@@ -127,19 +126,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #dadada;
   font-weight: 700;
   border-radius: 8px;
 }
 
-.container .wrapper .main__container .header__list__link:hover {
+.container .wrapper .main__container .nav__list__link:hover {
   cursor: pointer;
   color: #235ea1;
   background: #fff;
   transition: color, background-color .3s ease;
 }
 
-.container .wrapper .main__container .header__list .active__btn {
+.container .wrapper .main__container .nav__list .active__btn {
   background: #fff;
   position: relative;
   bottom: 10px;
@@ -148,16 +146,16 @@ body {
   transition: position .3s ease;
 }
 
-.container .wrapper .main__container .header__list .border__left {
+.container .wrapper .main__container .nav__list .border__left {
   border-left: 2px dotted rgba(0, 0, 0, 0.6);
 }
 
-.container .wrapper .main__container .header__list .border__both {
+.container .wrapper .main__container .nav__list .border__both {
   border-left: 2px dotted rgba(0, 0, 0, 0.6);
   border-right: 2px dotted rgba(0, 0, 0, 0.6);
 }
 
-.container .wrapper .main__container .header__list .border__right {
+.container .wrapper .main__container .nav__list .border__right {
   border-right: 2px dotted rgba(0, 0, 0, 0.6);
 }
 
@@ -180,15 +178,6 @@ body {
   background: #fff;
   padding: 1.5em;
   border-radius: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  .container .wrapper .main__home, .container .wrapper .main__projects, .container .wrapper .main__contact {
-    width: 100%;
-    height: auto;
-    padding: 2em;
-    margin-bottom: 20px;
-  }
 }
 
 .container .wrapper .main__home .main__title, .container .wrapper .main__projects .main__title, .container .wrapper .main__contact .main__title {
@@ -271,8 +260,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .container .wrapper .main .active__tab {
-    animation-name: fadeInDown;
+    animation-name: fadeInUp;
     animation-duration: .5s;
+    position: absolute;
+    top: 20px;
+    z-index: 20;
+    height: 80%;
+    width: 85%;
   }
 }
 

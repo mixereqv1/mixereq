@@ -5,3 +5,5 @@
 - added favicons
 ## Version 1.2 - changelog:
 - improved readability
+## Version 1.3 - changelog:
+- improved displaying tabs
