@@ -172,6 +172,7 @@ body {
 @media screen and (max-width: 768px) {
   .container .wrapper .main .normal__width {
     width: 100%;
+    animation-name: none;
   }
 }
 
